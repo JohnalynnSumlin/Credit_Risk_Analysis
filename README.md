@@ -18,7 +18,24 @@ This new assignment consists of three technical analysis deliverables and a writ
 * Deliverable 4: A Written Report on the Credit Risk Analysis (README.md)
 
 ## Results
-ksldlfkd
+The Easy Ensemble AdaBoost Classifier is the best of this bunch of models for predicting high-risk credit applications
+
+* Precision: the measure of how reliable a positive classification is. TP/(TP + FP).
+  * A low precision is indicative of a large number of false positives (ie. want this to be high)
+  * low risk loans: 1.00
+  * high risk loans: 0.09
+* Recall: the ability of the classifier to find all the positive samples. TP/(TP + FN).
+  * A low recall is indicative of a large number of false negatives. (ie. want this to be high)
+  * low risk loans: 0.94
+  * high risk loans: 0.92
+* F1 score: a weighted average of the true positive rate (recall) and precision (best score = 1.0, worst = 0.0)
+  * low risk loans: 0.97
+  * high risk loans: 0.16
+* Support: the number of actual occurrences of the class in the specified dataset.
+  * low risk loan: 17,104 actual occurrences
+  * high risk loans: 101 actual occurrences
 
 ## Summary
-dlfskjdlfk
+One thing to consider would be a false positive result (high risk applicants identified as low risk). This would approve high risk applicants for loans when they should be denied, as they may not be able to pay off their loans. A model with high precision will have lower false positive results. 
+Another consideration would be false negative result (low risk applicants identified as high risk). This would deny more people for loans who may have been a good candidate. A model with high recall/sensitivity will have a lower false negative results. 
+I would recommend the Easy Ensemble Clasifier model because it resulted in the highest accuracy, precision, and recall/sensitivity values when compared to the other models.
